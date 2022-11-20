@@ -1,0 +1,53 @@
+{
+  "name": "koa-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lihuan-bot/koa-backend.git",
+  "author": "lihuan <1968763315@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "npx husky install",
+    "commit": "git add . && git cz"
+  },
+  "dependencies": {
+    "koa": "^2.13.4",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@types/koa": "^2.13.5",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "commitizen": "^4.2.5",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog-zh": "^0.0.2",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.2",
+    "prettier": "^2.7.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-zh"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,.tsx}": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "yarn lint",
+      "git add ."
+    ]
+  }
+}
