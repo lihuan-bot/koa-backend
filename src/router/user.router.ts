@@ -12,5 +12,4 @@ import userController from '../controller/user.controller'
 const userRouter = new Router({ prefix: '/user' })
 userRouter.post('/', userController.create)
 
-
 export default userRouter

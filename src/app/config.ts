@@ -11,4 +11,5 @@ import type { ICfg } from '../types/config'
 
 dotenv.config()
 
-export const { APP_PORT,MYSQL_HOST,MYSQL_DATABASE,MYSQL_PASSWORD,MYSQL_PORT,MYSQL_USER } = process.env as any as ICfg
+export const { APP_PORT, MYSQL_HOST, MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_PORT, MYSQL_USER } =
+  process.env as any as ICfg

@@ -10,7 +10,7 @@
     "dev": "yarn start",
     "lint": "prettier -c --write \"src/**/*\"",
     "prepare": "npx husky install",
-    "commit": "git add . && yarn lint && git cz"
+    "commit": "yarn lint && git add . && git cz"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
