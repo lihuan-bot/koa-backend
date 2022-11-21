@@ -6,17 +6,26 @@
   "author": "lihuan <1968763315@qq.com>",
   "license": "MIT",
   "scripts": {
+    "start": "nodemon ./src/main.ts",
+    "dev": "yarn start",
+    "lint": "prettier -c --write \"src/**/*\"",
     "prepare": "npx husky install",
-    "commit": "git add . && git cz"
+    "commit": "git add . && yarn lint && git cz"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^12.0.0",
+    "mysql2": "^2.3.3",
     "typescript": "^4.9.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
     "@types/koa": "^2.13.5",
+    "@types/koa-bodyparser": "^4.3.10",
+    "@types/koa-router": "^7.4.4",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "commitizen": "^4.2.5",
@@ -30,6 +39,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.2",
+    "nodemon": "^2.0.20",
     "prettier": "^2.7.1"
   },
   "config": {
