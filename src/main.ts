@@ -2,7 +2,7 @@
  * @Author: lihuan
  * @Date: 2022-11-20 15:50:11
  * @LastEditors: lihuan
- * @LastEditTime: 2022-11-21 10:45:19
+ * @LastEditTime: 2022-11-21 14:30:56
  * @Email: 17719495105@163.com
  */
 
@@ -10,7 +10,6 @@ import type { Context, Next } from 'koa'
 
 import app from './app'
 import { APP_PORT } from './app/config'
-import './app/database'
 
 app.use(async (ctx: Context, next: Next) => {
   ctx.body = 'test'
